@@ -1,0 +1,76 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MyDesign
+Version: K-2015.06-SP1
+Date   : Fri Aug 24 16:56:34 2018
+****************************************
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm
+Wire Load Model Mode: top
+
+  Startpoint: quad2/data_count_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: quad2/c_in_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  quad2/data_count_reg[2]/CK (DFF_X2)                   0.0000     0.0000 r
+  quad2/data_count_reg[2]/QN (DFF_X2)                   0.4349     0.4349 r
+  quad2/U18/ZN (AND2_X2)                                0.1596     0.5946 r
+  quad2/U21/ZN (NAND3_X2)                               0.0639     0.6585 f
+  quad2/U14/ZN (NAND2_X2)                               0.5463     1.2048 r
+  quad2/U8/ZN (INV_X8)                                  0.1580     1.3628 f
+  quad2/U134/ZN (AND2_X1)                               0.3061     1.6689 f
+  quad2/mac0/A[8] (quad_module_2_DW02_mac_1)            0.0000     1.6689 f
+  quad2/mac0/U776/ZN (XNOR2_X2)                         0.9014     2.5703 r
+  quad2/mac0/U840/ZN (NAND2_X2)                         0.4286     2.9989 f
+  quad2/mac0/U1062/ZN (OAI22_X2)                        0.2957     3.2946 r
+  quad2/mac0/U342/S (FA_X1)                             0.8018     4.0964 f
+  quad2/mac0/U339/CO (FA_X1)                            0.5985     4.6950 f
+  quad2/mac0/U332/S (FA_X1)                             0.7993     5.4943 r
+  quad2/mac0/U331/S (FA_X1)                             0.6887     6.1830 f
+  quad2/mac0/U1031/ZN (OR2_X1)                          0.2901     6.4731 f
+  quad2/mac0/U814/ZN (INV_X4)                           0.0690     6.5421 r
+  quad2/mac0/U813/ZN (OAI21_X2)                         0.0720     6.6141 f
+  quad2/mac0/U815/ZN (INV_X4)                           0.0803     6.6944 r
+  quad2/mac0/U1003/ZN (OAI21_X2)                        0.0703     6.7646 f
+  quad2/mac0/U792/ZN (AOI21_X4)                         0.1525     6.9171 r
+  quad2/mac0/U1017/ZN (OAI21_X2)                        0.1024     7.0195 f
+  quad2/mac0/U831/ZN (AOI21_X2)                         0.3524     7.3719 r
+  quad2/mac0/U798/ZN (OAI21_X2)                         0.1315     7.5033 f
+  quad2/mac0/U794/ZN (AOI21_X2)                         0.2196     7.7230 r
+  quad2/mac0/U1049/ZN (OAI21_X2)                        0.1330     7.8559 f
+  quad2/mac0/U53/CO (FA_X1)                             0.4855     8.3414 f
+  quad2/mac0/U51/Z (XOR2_X2)                            0.4122     8.7536 f
+  quad2/mac0/MAC[31] (quad_module_2_DW02_mac_1)         0.0000     8.7536 f
+  quad2/U36/ZN (INV_X4)                                 0.1094     8.8630 r
+  quad2/U16/ZN (NAND2_X2)                               0.0995     8.9625 f
+  quad2/U26/ZN (OAI22_X2)                               0.3744     9.3369 r
+  quad2/U236/ZN (INV_X4)                                0.0403     9.3771 f
+  quad2/U237/ZN (OAI22_X2)                              0.3009     9.6780 r
+  quad2/c_in_reg[8]/D (DFF_X2)                          0.0000     9.6780 r
+  data arrival time                                                9.6780
+
+  clock clk (rise edge)                                10.0000    10.0000
+  clock network delay (ideal)                           0.0000    10.0000
+  clock uncertainty                                    -0.0500     9.9500
+  quad2/c_in_reg[8]/CK (DFF_X2)                         0.0000     9.9500 r
+  library setup time                                   -0.2679     9.6821
+  data required time                                               9.6821
+  --------------------------------------------------------------------------
+  data required time                                               9.6821
+  data arrival time                                               -9.6780
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0041
+
+
+1

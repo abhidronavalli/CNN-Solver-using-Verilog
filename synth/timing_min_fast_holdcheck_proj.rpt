@@ -1,0 +1,45 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : MyDesign
+Version: K-2015.06-SP1
+Date   : Fri Aug 24 16:56:28 2018
+****************************************
+
+Operating Conditions: fast   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm
+Wire Load Model Mode: top
+
+  Startpoint: quad0/mac_enable_tmp2_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: quad0/mac_enable_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  quad0/mac_enable_tmp2_reg/CK (DFF_X2)                 0.0000     0.0000 r
+  quad0/mac_enable_tmp2_reg/Q (DFF_X2)                  0.0535     0.0535 r
+  quad0/mac_enable_reg/D (DFF_X2)                       0.0000     0.0535 r
+  data arrival time                                                0.0535
+
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  clock uncertainty                                     0.0500     0.0500
+  quad0/mac_enable_reg/CK (DFF_X2)                      0.0000     0.0500 r
+  library hold time                                    -0.0153     0.0347
+  data required time                                               0.0347
+  --------------------------------------------------------------------------
+  data required time                                               0.0347
+  data arrival time                                               -0.0535
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0189
+
+
+1
